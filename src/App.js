@@ -8,29 +8,49 @@ import {
   NavLink
 } from "react-router-dom";
 
+import WelcomePage from './components/WelcomePage';
 // import TabNav from "./components/TabNav.js";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList.js";
 import LocationsList from "./components/LocationsList.js";
+import EpisodesList from './components/EpisodesList.js';
 // import AppRouter from "./components/AppRouter.js";
-
-const panes = [
-  { menuItem: 'Tab 1', render: () => <Tab.Pane>Tab 1 Content</Tab.Pane> },
-  { menuItem: 'Tab 2', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
-  { menuItem: 'Tab 3', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
-]
-
-const TabExampleBasic = () => <Tab panes={panes} />
 
 
 export default function App() {
   return (
     <main>
+      <ul>
+        <li>
+          <NavLink exact to="/">
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/characters">
+            Characters
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/locations">
+            Locations
+          </NavLink>
+        </li>
+        <li>
+          <NavLink exact to="/episodes">
+            Episodes
+          </NavLink>
+        </li>
+      </ul>
+
       <Header />
+      <Route exact path="/home" component={WelcomePage} />
+      <Route exact path="/characters" component={CharacterList} />
+      <Route exact path="/locations" component={LocationsList} />
+      <Route exact path="/episodes" component={EpisodesList} />
+
       {/* <TabNav />
       <AppRouter /> */}
-      <CharacterList />
-      <LocationsList />
     </main>
   );
 }
