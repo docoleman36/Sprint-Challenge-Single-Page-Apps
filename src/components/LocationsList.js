@@ -20,19 +20,21 @@ export default function LocationsList() {
   return (
     <section className="character-list grid-view">
       <div>
-        <h1>Locations Page</h1>
-        {location.map(locations => (
-          <Card>
-            <Card.Content>
-              <Card.Header key={locations.id}>{locations.name}</Card.Header>
-              <Card.Meta>
-                <span>{locations.type}</span>
-                <span>{locations.dimension}</span>
-              </Card.Meta>
-              <Card.Description>{locations.created}</Card.Description>
-            </Card.Content>
-          </Card>
-        ))}
+        <h1 className="h1">Locations Page</h1>
+        <div className="card">
+          {location.map(locations => (
+            <Card>
+              <Card.Content>
+                <Card.Header key={locations.id}>{locations.name}</Card.Header>
+                <Card.Meta>
+                  <span>{locations.type}</span>
+                  <span>{locations.dimension}</span>
+                </Card.Meta>
+                <Card.Description>{locations.created}</Card.Description>
+              </Card.Content>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

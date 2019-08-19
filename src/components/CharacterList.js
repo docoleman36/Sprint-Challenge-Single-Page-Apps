@@ -23,20 +23,22 @@ export default function CharacterList(props) {
   return (
     <section className="character-list grid-view">
       <div>
-        <h1>Characters Page</h1>
-        {track.map(characters => (
-          <Card>
-            <Image src={characters.image}></Image>
-            <Card.Content>
-              <Card.Header key={characters.id}>{characters.name}</Card.Header>
-              <Card.Meta>
-                <span>{characters.gender}</span>
-                <span>{characters.species}</span>
-              </Card.Meta>
-              <Card.Description>{characters.created}</Card.Description>
-            </Card.Content>
-          </Card>
-        ))}
+        <h1 className="h1">Characters Page</h1>
+        <div className="card">
+          {track.map(characters => (
+            <Card>
+              <Image src={characters.image}></Image>
+              <Card.Content>
+                <Card.Header key={characters.id}>{characters.name}</Card.Header>
+                <Card.Meta>
+                  <span>{characters.gender}</span>
+                  <span>{characters.species}</span>
+                </Card.Meta>
+                <Card.Description>{characters.created}</Card.Description>
+              </Card.Content>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

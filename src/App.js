@@ -7,14 +7,14 @@ import {
   NavLink
 } from "react-router-dom";
 
-import TabNav from "./components/TabNav.js";
+// import TabNav from "./components/TabNav.js";
 import AppRouter from "./components/AppRouter.js";
 
 
 export default function App() {
   return (
     <main>
-      <TabNav />
+      {/* <TabNav /> */}
       <AppRouter />
     </main>
   );

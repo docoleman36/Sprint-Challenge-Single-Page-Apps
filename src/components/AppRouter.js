@@ -2,7 +2,6 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   NavLink
 } from "react-router-dom";
 
@@ -13,18 +12,18 @@ import EpisodesList from './EpisodesList.js';
 
 export default function AppRoutes() {
   return (
-    <div>
+    <nav>
       <ul>
-        {/* <li>
+        <li>
           <NavLink exact to="/">
             Home
           </NavLink>
-        </li> */}
-        {/* <li>
+        </li>
+        <li>
           <NavLink exact to="/characters">
             Characters
           </NavLink>
-        </li> */}
+        </li>
         <li>
           <NavLink exact to="/locations">
             Locations
@@ -40,7 +39,7 @@ export default function AppRoutes() {
       <Route exact path="/characters" component={CharacterList} />
       <Route exact path="/locations" component={LocationsList} />
       <Route exact path="/episodes" component={EpisodesList} />
-    </div>
+    </nav>
   );
 
 }

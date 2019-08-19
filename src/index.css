@@ -27,13 +27,41 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
+
 .main-img {
   display: block;
   border-radius: 100%;
   margin: 0 auto;
-} */
+}
 
 header h1 {
   text-align: center;
 }
+
+nav > ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  padding-bottom: 20px;
+
+}
+
+nav > ul > li {
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover{
+  color: dodgerblue;
+}
+
+.h1{
+  text-align: center;
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+

@@ -20,20 +20,22 @@ export default function CharacterList(props) {
   return (
     <section className="character-list grid-view">
       <div>
-        <h1>Episodes Page</h1>
-        {episode.map(episodes => (
-          <Card>
-            <Card.Content>
-              <Card.Header key={episodes.id}>{episodes.name}</Card.Header>
-              <Card.Meta>
-                <span>{episodes.air_date}</span>
-                <span>{episodes.episode}</span>
-              </Card.Meta>
-              <Card.Description>{episodes.url}</Card.Description>
-              <Card.Description>{episodes.created}</Card.Description>
-            </Card.Content>
-          </Card>
-        ))}
+        <h1 className="h1">Episodes Page</h1>
+        <div className="card">
+          {episode.map(episodes => (
+            <Card>
+              <Card.Content>
+                <Card.Header key={episodes.id}>{episodes.name}</Card.Header>
+                <Card.Meta>
+                  <span>{episodes.air_date}</span>
+                  <span>{episodes.episode}</span>
+                </Card.Meta>
+                <Card.Description>{episodes.url}</Card.Description>
+                <Card.Description>{episodes.created}</Card.Description>
+              </Card.Content>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
