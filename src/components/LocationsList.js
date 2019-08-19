@@ -20,6 +20,7 @@ export default function LocationsList() {
   return (
     <section className="character-list grid-view">
       <div>
+        <h1>Locations Page</h1>
         {location.map(locations => (
           <Card>
             <Card.Content>

@@ -20,6 +20,7 @@ export default function CharacterList(props) {
   return (
     <section className="character-list grid-view">
       <div>
+        <h1>Episodes Page</h1>
         {episode.map(episodes => (
           <Card>
             <Card.Content>
