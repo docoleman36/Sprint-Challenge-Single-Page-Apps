@@ -15,16 +15,16 @@ export default function AppRoutes() {
   return (
     <div>
       <ul>
-        <li>
+        {/* <li>
           <NavLink exact to="/">
             Home
           </NavLink>
-        </li>
-        <li>
+        </li> */}
+        {/* <li>
           <NavLink exact to="/characters">
             Characters
           </NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink exact to="/locations">
             Locations
