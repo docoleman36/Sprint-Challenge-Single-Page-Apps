@@ -1,28 +1,60 @@
 import React from "react";
-import { Tab } from "semantic-ui-react";
+import { Tab, Menu, Icon } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
-import CharacterList from "./CharacterList";
-import WelcomePage from "./WelcomePage";
+import AppRouter from "./AppRouter";
 
 const panes = [
   {
-    menuItem: 'Home', render: () => <Tab.Pane>
-      <NavLink exact as={WelcomePage}>Home</NavLink>
-    </Tab.Pane>
+    menuItem: (
+      <Menu.Item key='home'>
+        <NavLink to="/">
+          <Icon name='home' />
+          Home Page
+        </NavLink>
+      </Menu.Item>
+    ),
+    render: () => <Tab.Pane><AppRouter /></Tab.Pane>
   },
   {
-    menuItem: 'Characters', render: () => <Tab.Pane>
-      <NavLink exact as={CharacterList}>Characters</NavLink>
-    </Tab.Pane>
+    menuItem: (
+      <Menu.Item key='characters'>
+        <NavLink to="/characters">
+          <Icon name='users' />
+          Characters
+        </NavLink>
+      </Menu.Item>
+    ),
+    render: () => <Tab.Pane><AppRouter /></Tab.Pane>
   },
-  { menuItem: 'Locations', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
-  { menuItem: 'Episodes', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
+  {
+    menuItem: (
+      <Menu.Item key='locations'>
+        <NavLink to="/locations">
+          <Icon name='map outline' />
+          Locations
+        </NavLink>
+      </Menu.Item>
+    ),
+    render: () => <Tab.Pane><AppRouter /></Tab.Pane>
+  },
+  {
+    menuItem: (
+      <Menu.Item key='episodes'>
+        <NavLink to="/episodes">
+          <Icon name='video camera' />
+          Episodes
+        </NavLink>
+      </Menu.Item>
+    ),
+    render: () => <Tab.Pane><AppRouter /></Tab.Pane>
+  }
+];
 
-]
-
-const TabComponents = () => <Tab panes={panes} />
-
-export default TabComponents
+export default function TabNav() {
+  return (
+    <Tab panes={panes} />
+  )
+};
 
 
 
